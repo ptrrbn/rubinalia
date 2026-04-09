@@ -104,17 +104,17 @@ main {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.25rem;
 }
 
 h1 {
   font-size: 1.75rem;
   line-height: 1.25;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .dek {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   color: var(--muted);
   line-height: 1.5;
   font-style: italic;
@@ -122,6 +122,24 @@ h1 {
 
 .article-body p { margin-bottom: 1.25rem; }
 .article-body img { max-width: 100%; height: auto; display: block; margin: 1.5rem 0; }
+
+/* Lead photo: float right so text wraps around it */
+.article-body #photo {
+  float: right;
+  margin: 0 0 1.5rem 2rem;
+  max-width: 220px;
+}
+.article-body #photo img {
+  display: inline;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+.article-body::after {
+  content: "";
+  display: table;
+  clear: both;
+}
 .article-body blockquote, .article-body .block {
   border-left: 3px solid var(--border);
   padding-left: 1rem;
