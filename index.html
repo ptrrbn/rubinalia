@@ -15,7 +15,7 @@ title: Writing
     <ul>
       {% for piece in pieces %}
       <li>
-        <a href="{{ piece.url }}">{{ piece.title }}</a>
+        <a href="{{ piece.url | relative_url }}">{{ piece.title }}</a>
         <span class="meta">{{ piece.publication }}{% if piece.date %} &middot; {{ piece.date | date: "%Y" }}{% endif %}</span>
       </li>
       {% endfor %}
