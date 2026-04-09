@@ -1,0 +1,25 @@
+---
+layout: default
+title: Writing
+---
+{% assign categories = "features,music,film,crit,other" | split: "," %}
+{% assign labels = "Features,Music,Film,Criticism,Other" | split: "," %}
+
+{% for i in (0..4) %}
+  {% assign cat = categories[i] %}
+  {% assign label = labels[i] %}
+  {% assign pieces = site.writing | where: "category", cat | sort: "date" | reverse %}
+  {% if pieces.size > 0 %}
+  <section class="writing-section">
+    <h2>{{ label }}</h2>
+    <ul>
+      {% for piece in pieces %}
+      <li>
+        <a href="{{ piece.url }}">{{ piece.title }}</a>
+        <span class="meta">{{ piece.publication }}{% if piece.date %} &middot; {{ piece.date | date: "%Y" }}{% endif %}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+{% endfor %}
