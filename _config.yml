@@ -1,0 +1,26 @@
+title: rubinalia
+url: "https://rubinalia.com"
+baseurl: ""
+permalink: pretty
+
+collections:
+  writing:
+    output: true
+    permalink: /writing/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: writing
+    values:
+      layout: article
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - site_backup/
+  - scripts/
+  - docs/
+  - ftp_backup.py
+  - "*.sql"
+  - vendor/
