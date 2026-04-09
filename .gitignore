@@ -8,5 +8,4 @@ site_backup/
 .DS_Store
 docs/
 ftp_backup.py
-scripts/
 .claude/
