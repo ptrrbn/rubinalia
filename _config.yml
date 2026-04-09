@@ -1,6 +1,6 @@
 title: rubinalia
 url: "https://rubinalia.com"
-baseurl: ""
+baseurl: "/rubinalia"
 permalink: pretty
 
 collections:
