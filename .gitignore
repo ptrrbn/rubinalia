@@ -8,4 +8,6 @@ site_backup/
 .DS_Store
 docs/
 ftp_backup.py
+__pycache__/
+*.pyc
 .claude/
